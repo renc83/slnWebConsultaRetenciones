@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebConsultaRetenciones.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOG - <%: Page.Title %></title>
+
+    <link href="/Local_Resources/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     <!-- jQuery -->
+    <%--<script src="/Scripts/plugins/jquery/jquery.min.js"></script>--%>
+    <script src="/Scripts/plugins/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/Scripts/plugins/fontawesome-free/css/all.min.css">
+    <!-- toast mensajes -->
+    <link href="/Scripts/plugins/toastr/toastr.css" rel="stylesheet" />
+    <script src="/Scripts/plugins/toastr/toastr.js"></script>
+    <!-- funciones -->
+    <script src="/Scripts/js/sysfunctions.js"></script>
+    <!-- estilos personalizados -->
+    <link href="/Scripts/css/sysStyle.css" rel="stylesheet" />
+    <!-- Datatables -->
+    <link href= "/Scripts/plugins/DataTables/DataTables-1.13.5/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href= "/Scripts/plugins/DataTables/Buttons-2.4.0/css/buttons.dataTables.min.css" rel="stylesheet"/>
+    <link href= "/Scripts/plugins/DataTables/DateTime-1.5.0/css/dataTables.dateTime.min.css" rel="stylesheet"/> 
+    <script src="/Scripts/plugins/DataTables/DataTables-1.13.5/js/jquery.dataTables.min.js"></script>
+
+<%--    <script src="/Scripts/plugins/DataTables/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="/Scripts/plugins/DataTables/pdfmake-0.2.7/pdfmake.min.js"></script>
+    <script src="/Scripts/plugins/DataTables/pdfmake-0.2.7/vfs_fonts.js"></script>--%>
+<%--    <script src="/Scripts/plugins/DataTables/Buttons-2.4.0/js/dataTables.buttons.min.js"></script>
+    <script src="/Scripts/plugins/DataTables/Buttons-2.4.0/js/buttons.html5.min.js"></script>
+    <script src="/Scripts/plugins/DataTables/Buttons-2.4.0/js/buttons.print.min.js"></script>--%>
+<%--    <script src="/Scripts/plugins/DataTables/DateTime-1.5.0/js/dataTables.dateTime.min.js"></script>--%>
+</head>
+<body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="encabezado-1">
+                    <div>
+                        <img src="../Local_Resources/Images/VOG-horiz-blue.png" height="70px">
+                        <h5>Comprobantes de Retención Online v1.0</h5>
+                    </div>
+                    <div style="display: grid;vertical-align:middle;">
+                        <a href="../Modulos/pgSeleccionEmpresa.aspx"><img src="../Local_Resources/Images/empresa.png" height="50px" title="Empresa"></a>
+                        <a href="../Login.aspx"><img src="../Local_Resources/Images/salir.png" height="50px" title="Salir"></a>
+                    </div>
+                    <div id="imagenlogo">
+                        <img src="../Local_Resources/Images/VOG-logo-emp.png" height="100px">
+                    </div>
+                </div>
+        </div>
+        <div class="container body-content">
+            <hr />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+           <footer class="pie-pagina">
+           <div class="grupo-1">
+                <strong>Copyright &copy; 2023 - VOG</strong>
+                <div class="float-right d-none d-sm-inline-block"><b>Version</b> 1.0.1 </div>
+            </div></footer>
+        </div>
+
+    <!-- Bootstrap 4 -->
+    <script src="/Scripts/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="/Scripts/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<%--    <script src="/Scripts/plugins/bootstrap/js/bootstrap.min.js"></script>--%>
+
+</body>
+</html>

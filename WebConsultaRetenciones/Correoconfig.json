@@ -1,0 +1,20 @@
+{
+  "TipoCorreo": "SMTP",
+  "SMTP": {
+    "Server": "email-smtp.us-west-2.amazonaws.com",
+    "Username": "AKIAYBGTRTRL37T5GJAX",
+    "Password": "BLjionS7AI9jBAeY+ZBtsQcQAktIKskSYSXdMPvoMYZR",
+    "Port": 587,
+    "RemitenteText": "noreply@suminoxaceros.net"
+  },
+  "SQLProfile": {
+    "profile_name": "SqlReporte Mail"
+  },
+  "ReportesModificados": [
+    {
+      "Empresa": "ALIB5",
+      "Tipo": "ARCV",
+      "NombreFisico": "rptRetencionARCV_ALIB5.rdlc"
+    }
+  ]
+}

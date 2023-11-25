@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BF9C84F-DEA3-4FB9-8F40-351F0A65FF63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatLogin\dLoginActualizaPSW.cs" />
+    <Compile Include="DatLogin\dLoginRegistro.cs" />
+    <Compile Include="DatLogin\dLoginValidaSesion.cs" />
+    <Compile Include="dCorreoConfiguracion.cs" />
+    <Compile Include="dCorreoSQL.cs" />
+    <Compile Include="dEmpresaBusca.cs" />
+    <Compile Include="dListadoRetenciones.cs" />
+    <Compile Include="dListadoRetencionesARCV.cs" />
+    <Compile Include="dRetencionAdicDet.cs" />
+    <Compile Include="dRetencionAdicEnc.cs" />
+    <Compile Include="dRetencionARCVDet.cs" />
+    <Compile Include="dRetencionARCVEnc.cs" />
+    <Compile Include="dRetencionISLRDet.cs" />
+    <Compile Include="dRetencionISLREnc.cs" />
+    <Compile Include="dRetencionIvaDet.cs" />
+    <Compile Include="dRetencionIvaEnc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="syscEncripta.cs" />
+    <Compile Include="sysConexionSQL.cs" />
+    <Compile Include="dCorreoSMTP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{797cdeaf-e4fe-49af-89ca-52bc3ba7df9a}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ScriptsSQL\PL_WebFindCompanyRIFVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEBListRetencionesARCVVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEBListRetencionesVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEBUSERSVOG_I.sql" />
+    <Content Include="ScriptsSQL\PL_WEBUSERSVOG_PSW.sql" />
+    <Content Include="ScriptsSQL\PL_WEBUSERSVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetADICDetVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetADICEncVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetARCVDetVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetARCVEncVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetISLRDetVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetISLREncVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetIvaDetVOG_S.sql" />
+    <Content Include="ScriptsSQL\PL_WEB_RetIvaEncVOG_S.sql" />
+    <Content Include="ScriptsSQL\pr_SysSendMail_Cliente.sql" />
+    <Content Include="ScriptsSQL\WebRetenciones_CREA TABLAS.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
